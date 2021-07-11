@@ -48,61 +48,6 @@ var	option = {
         lineStyle:{color:'#000'},
         data:datalist,
         links:linklist,
-        // data: [{
-        //     name: "某IT男",
-        //     draggable: true,                // 节点是否可拖拽，只在使用力引导布局的时候有用。
-        //     symbolSize: [100, 100],         // 关系图节点标记的大小，可以设置成诸如 10 这样单一的数字，也可以用数组分开表示宽和高，例如 [20, 10] 表示标记宽为20，高为10。
-        //     itemStyle: {
-        //         color: '#000',			// 关系图节点标记的颜色
-        //     },]
-        // }, {
-        //     name: "工资\n6000",
-        //     draggable: true,
-        //     symbolSize: [80, 80],
-        //     itemStyle: {
-        //         color: '#0000ff'
-        //     },
-        // }, {
-        //     name: "租房\n600",
-        //     draggable: true,
-        //     symbolSize: [80, 80],
-        //     itemStyle: {
-        //         color: '#ff0000'
-        //     },
-        // }, {
-        //     name: "生活开销\n1400",
-        //     draggable: true,
-        //     symbolSize: [80, 80],
-        //     itemStyle: {
-        //         color: '#ff0000'
-        //     },
-        // }, {
-        //     name: "储蓄\n4000",
-        //     draggable: true,
-        //     symbolSize: [80, 80],
-        //     itemStyle: {
-        //         color: '#00ff00'
-        //     },
-        // }],
-
-        // links: [{                   // 节点间的关系数据
-        //     target: "工资\n6000",
-        //     source: "某IT男",
-        //     lineStyle:{width:10},
-        //     symbol: ['circle', 'arrow'],
-        //     symbolSize: [5, 20],
-        // }, {
-        //     target: "租房\n600",
-        //     source: "某IT男",
-        //     symbolSize: [10, 20],
-        // }, {
-        //     target: "生活开销\n1400",
-        //     source: "某IT男",
-        // }, {
-        //     target: "储蓄\n4000",
-        //     source: "某IT男",
-        // },]
-        
     }],
     
     animationEasingUpdate: "quinticInOut",          // 数据更新动画的缓动效果。[ default: cubicOut ]    "quinticInOut"
