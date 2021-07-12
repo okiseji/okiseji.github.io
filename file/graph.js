@@ -1,4 +1,9 @@
 var chart = echarts.init(document.getElementById("chart"));
+// function getValue(){
+// var currentFontSize=$("input[name='fontSize']").val();
+// var d = document.getElementById('fontSize');//获取div的节点
+// d.innerHTML = currentFontSize;
+// };
 var	option = {
     backgroundColor: '#fff',	
     title: {                    // 图表标题
@@ -34,7 +39,7 @@ var	option = {
         symbol: 'circle',
         edgeSymbol: ['arrow', 'arrow'],
         edgeSymbolSize: [10, 10],
-        
+        zoom:0.8,
         label: {                // 关系对象上的标签
             normal: {
                 show: true,                 // 是否显示标签
@@ -48,16 +53,10 @@ var	option = {
         lineStyle:{color:'#000'},
         data:datalist,
         links:linklist,
-<<<<<<< HEAD
-        // data: [{
-        
-=======
->>>>>>> 076ea03ad7902ad0adb9f7d276de16ded3a03225
     }],
     
     animationEasingUpdate: "quinticInOut",          // 数据更新动画的缓动效果。[ default: cubicOut ]    "quinticInOut"
     animationDurationUpdate: 100                    // 数据更新动画的时长。[ default: 300 ]
 };
-	
 // 使用刚指定的配置项和数据显示图表
-chart.setOption(option)
+chart.setOption(option);
