@@ -48,8 +48,11 @@ var	option = {
         lineStyle:{color:'#000'},
         data:datalist,
         links:linklist,
+<<<<<<< HEAD
         // data: [{
         
+=======
+>>>>>>> 076ea03ad7902ad0adb9f7d276de16ded3a03225
     }],
     
     animationEasingUpdate: "quinticInOut",          // 数据更新动画的缓动效果。[ default: cubicOut ]    "quinticInOut"
