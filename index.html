@@ -1,16 +1,32 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <meta charset="UTF-8">
-    <title>V-Net</title>
-    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script src="file/echarts.js" type="text/javascript" charset="utf-8"></script>
+  <style> body { margin: 0; } </style>
+  <script src="https://unpkg.com/3d-force-graph"></script>
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/three/examples/js/renderers/CSS2DRenderer.js"></script>
 </head>
+
 <body>
-    
-    <div id="chart" style="height:735%;weight:110%;"></div>
-    <script src="file/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="file/new.js" type="text/javascript" charset="utf-8"></script>
-    <script src="file/graph.js" type="text/javascript" charset="utf-8"></script>
+  <div id="3d-graph"></div>
+<script src='./dist/data.js' charset='utf-8'></script>
+  <script>
+  //import { UnrealBloomPass } from 'https://cdn.skypack.dev/three/examples/jsm/postprocessing/UnrealBloomPass.js';
+  const Graph = ForceGraph3D(
+    {controlType:'trackball',
+      extraRenderers: [new THREE.CSS2DRenderer()]
+    }
+    )
+    (document.getElementById('3d-graph'))
+      //.backgroundColor('#FFB7DD')
+      .graphData(data)
+      .nodeLabel('name')
+      .nodeAutoColorBy('group')
+      .linkDirectionalParticles(link=>link.width)
+      .linkDirectionalParticleSpeed(0.01)
+      .linkWidth(link=>link.width/5)
+      .linkOpacity(0.4)
+      .linkAutoColorBy(link=>link.source)
+      .linkDirectionalParticleWidth(link=>link.width/5)
+      .d3Force('link')
+      .distance(link => link.length)
+  </script>
 </body>
-</html>
